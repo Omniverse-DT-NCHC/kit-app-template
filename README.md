@@ -4,6 +4,26 @@
   <img src="readme-assets/kit_app_template_banner.png" width=100% />
 </p>
 
+## How to build a new image from this repo
+Note that this building tool uses docker to build.
+
+```bash
+git clone https://github.com/NVIDIA-Omniverse/kit-app-template.git
+cd kit-app-template
+
+git reset --hard
+git clean -fdx
+git checkout -B kit-109.0.2 remotes/origin/109.0.2
+
+git branch -vv
+git log -1 --decorate --oneline
+
+./repo.sh template new
+
+./repo.sh build
+```
+
+
 ## Overview
 
 Welcome to `kit-app-template`, a toolkit designed for developers interested in GPU-accelerated application development within the NVIDIA Omniverse ecosystem. This repository offers streamlined tools and templates to simplify creating high-performance, OpenUSD-based desktop or cloud streaming applications using the Omniverse Kit SDK.
