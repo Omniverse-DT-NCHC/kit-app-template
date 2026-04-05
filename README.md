@@ -21,6 +21,8 @@ git log -1 --decorate --oneline
 ./repo.sh template new
 
 ./repo.sh build
+
+./repo.sh package_container --image-tag 2026.2.3
 ```
 
 
